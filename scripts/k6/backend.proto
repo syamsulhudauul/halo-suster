@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package pb;
+
+import "google/protobuf/empty.proto";
+
+option go_package = "entity/pb";
+
+message GetNipResponse {
+    uint64 nip = 1;
+}
+
+service NIPService {
+    rpc GetItNip (google.protobuf.Empty) returns (GetNipResponse);
+    rpc GetNurseNip (google.protobuf.Empty) returns (GetNipResponse);
+}
+
